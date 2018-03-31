@@ -42,7 +42,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
     Aprire il terminale e digitare roscore
     </li>
     <li>
-    Aprire il terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 sendInfo
+    Aprire il terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 sendInfo <br>
     ![nodo](images/printInfo.png)
     </li>
     <li>
