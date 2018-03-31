@@ -8,13 +8,25 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   <head>
   </head>
   <body>
-    <h1> Heila </h1>
+    <ul>
+      <li>
+      Il primo nodo richiede il nome, età, corso Informatica.
+      </li>
+      <li>
+      Il secondo nodo richiede di inserire: 'a' per visualizzare tutto il messaggio (nome,età,cdl) <br>
+                                            'n' per visualizzare solo il nome <br>
+                                            'e' per visualizzare solo l'età <br>
+                                            'c' per visualizzare solo la cdl
+      </li>
+      <li>
+      Il terzo nodo mostrerà ciò che nel secondo nodo è stato selezionato <br>
+      </li>
+    </ul>
   </body>
 </html>
-Laboratorio Ciberfisico<br>
-[Robot Programming with ROS](http://profs.scienze.univr.it/~bloisi/corsi/ciberfisico.html)<br>
+
+[Node Programming in ROS (c++)]<br>
 A.Y. 2017/2018<br>
-University of Verona (Italy)
 
 ![laboratorio ciberfisico](images/cyberphysical-lab.jpg)
 
