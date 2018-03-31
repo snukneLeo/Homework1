@@ -1,0 +1,5 @@
+<launch>
+    <node name="receiveChangeInfo" pkg="homework1" type="receiveChangeInfo" output="screen"/>
+    <node name="sendInfo" pkg="homework1" type="sendInfo" output="screen" />
+    <node name="printInfo" pkg="homework1" type="printInfo" output="screen" />
+</launch>
