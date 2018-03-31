@@ -59,4 +59,4 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 A.Y. 2017/2018<br>
 
 Please, report suggestions/comments/bugs to<br>
-domenico.bloisi@gmail.com
+snukne96@gmail.com
