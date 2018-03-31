@@ -23,13 +23,14 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
     </ul>
     <h2> Come eseguire il programma ROS </h2>
+    <hr>
   </body>
 </html>
 
 [Node Programming in ROS (c++)]<br>
 A.Y. 2017/2018<br>
 
-![](images/cyberphysical-lab.jpg)
+![cartellascript](images/cyberphysical-lab.jpg)
 
 univr_turtle is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
