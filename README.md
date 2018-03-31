@@ -43,8 +43,8 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
     </li>
     <li>
     Aprire il terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 sendInfo
+    ![nodo](images/cyberphysical-lab.jpg)
     </li>
-    ![image nodo 1](images/cyberphysical-lab.jpg)
     <li>
     Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 receiveChangeInfo
     </li>
