@@ -24,6 +24,33 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
     </ul>
     <h2> Come eseguire il programma ROS </h2>
     <hr>
+    Il programma può essere eseguito nel modo in cui segue:
+    <ul>
+      <li>
+      Aprire il terminale all'interno della cartella script.
+      </li>
+      <li>
+      Scrivere nel terminale: ./script.sh si apriranno altre 3 bash (xterminal).
+      In 3 terminali saranno: 1° nodo, 2°nodo e 3° nodo.
+      </li>
+    </ul>
+    <h2> Ulteriore metodo per eseguire il programma </h2>
+    <hr>
+    <ul>
+    <li>
+    Aprire il terminale e digitare roscore
+    </li>
+    <li>
+    Aprire il terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 sendInfo
+    </li>
+    ![image nodo 1](images/sendInfo.png)
+    <li>
+    Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 receiveChangeInfo
+    </li>
+    <li>
+    Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
+    </li>
+    </ul>
   </body>
 </html>
 
