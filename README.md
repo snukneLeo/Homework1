@@ -51,7 +51,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
       </li>
     </ul>
-    <img src="images/sendInfo.png"/>
+    <img src="images/sendInfo.png" alt="SendInfo">
   </body>
 </html>
 
