@@ -28,7 +28,6 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
     </ul>
     <h2> Come eseguire il programma ROS </h2>
-    <hr>
     Il programma può essere eseguito nel modo in cui segue:
     <ul>
       <li>
@@ -40,7 +39,6 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
     </ul>
     <h2> Ulteriore metodo per eseguire il programma </h2>
-    <hr>
     <ul>
       <li>
         Aprire il terminale e digitare roscore
@@ -61,12 +59,20 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 
 <b>Nodo master:</b> <br>
 ![node master](images/roscore.png) <br>
-Nodo 1: <br>
+<b>Nodo 1:</b> <br>
 ![node 1](images/sendInfo.png) <br>
-Nodo 2: <br>
+<b>Nodo 2:</b> <br>
 ![node 2](images/receiveInfo.png) <br>
-Nodo 3: <br>
+<b>Nodo 3:</b> <br>
 ![node 3](images/printInfo.png) <br>
+
+La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:
+<b>Nodes Graph:</b> <br>
+![node Graph](images/rosgraph.png) <br>
+
+
+
+
 
 Please, report suggestions/comments/bugs to<br>
 snukne96@gmail.com
