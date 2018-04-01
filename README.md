@@ -59,9 +59,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   </body>
 </html>
 
-![node 1](images/sendInfo.png)
-[Node Programming in ROS (c++)]<br>
-A.Y. 2017/2018<br>
+![node 1](images/sendInfo.png) <br>
 
 Please, report suggestions/comments/bugs to<br>
 snukne96@gmail.com
