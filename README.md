@@ -18,6 +18,10 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
                                             'n' per visualizzare solo il nome <br>
                                             'e' per visualizzare solo l'età <br>
                                             'c' per visualizzare solo la cdl
+      Il 2° nodo richiederà di inserire la vostra scelta ogni 5 secondi (scelta costruttiva)
+      senza però dover premere invio, ma solo digitando il carattere e nel caso in cui venisse
+      premuto un tasto diverso da quelli elencati sopra
+      il 2° nodo si chiuderebbe.
       </li>
       <li>
       Il terzo nodo mostrerà ciò che nel secondo nodo è stato selezionato <br>
@@ -51,7 +55,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
       </li>
     </ul>
-    <img src="images/sendInfo.png" alt="SendInfo">
+    <h3>  </h3>
   </body>
 </html>
 
