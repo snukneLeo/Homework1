@@ -32,7 +32,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
       <li>
       Scrivere nel terminale: ./script.sh si apriranno altre 3 bash (xterminal).
-      In questi 3 terminali ci sarà: 1° nodo, 2°nodo e 3° nodo.
+      In questi 3 terminali ci saranno: 1° nodo, 2°nodo e 3° nodo.
       </li>
     </ul>
     <h2> Ulteriore metodo per eseguire il programma </h2>
@@ -51,12 +51,10 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
       </li>
     </ul>
+    <img src="images/sendInfo.png"/>
   </body>
 </html>
 
-
-
-![nodo](images/printInfo.png)
 [Node Programming in ROS (c++)]<br>
 A.Y. 2017/2018<br>
 
