@@ -59,13 +59,13 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   </body>
 </html>
 
-Nodo master:
+<b>Nodo master:</b> <br>
 ![node master](images/roscore.png) <br>
-Nodo 1:
+Nodo 1: <br>
 ![node 1](images/sendInfo.png) <br>
-Nodo 2:
+Nodo 2: <br>
 ![node 2](images/receiveInfo.png) <br>
-Nodo 3:
+Nodo 3: <br>
 ![node 3](images/printInfo.png) <br>
 
 Please, report suggestions/comments/bugs to<br>
