@@ -53,7 +53,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
       </li>
     </ul>
-    <h3> Illustrazione sull'esecuzione del programma senza script </h3>
+    <h3> Illustrazione sull'esecuzione del programma <b>senza</b> script </h3>
   </body>
 </html>
 
@@ -66,11 +66,12 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 <b>Nodo 3:</b> <br>
 ![node 3](images/printInfo.png) <br>
 
-La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:
+La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Nodes Graph:</b> <br>
 ![node Graph](images/rosgraph.png) <br>
 
-
+<b>Esecuzione programma: </b><br>
+![Esecuzione programma](images/esecuzione_es.png) 
 
 
 
