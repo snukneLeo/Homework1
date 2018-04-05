@@ -1,3 +1,5 @@
+<!-- ATTENZIONE QUESTO FILE LAUNCH NON È CORRETTO, AL POSTO DI LANCIARE QUESTO FILE CON ROSLAUNCH
+     SI ESEGUE IL PROGRAMMA COME DESCRITTO SUL README.MD -->
 <launch>
     <node name="receiveChangeInfo" pkg="homework1" type="receiveChangeInfo" output="screen"/>
     <node name="sendInfo" pkg="homework1" type="sendInfo" output="screen" />
