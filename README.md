@@ -76,7 +76,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 <b>Lancio script: </b> <br>
 ![script start](images/start_script.png) <br>
 <b>Esecuzione script con nodi: </b> <br>
-![script esecuzione](images/esecuzione script.png) <br>
+![script esecuzione](images/esecuzione_script.png) <br>
 
 
 La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
