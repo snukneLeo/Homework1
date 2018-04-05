@@ -2,7 +2,7 @@
 
 #AVVIO ROSCORE NODO MASTER
 xterm -hold -e roscore &
-sleep .5
+sleep 1.0
 #AVVIO PRIMO NODO
 xterm -hold -e bash primo_nodo.sh &
 #AVVIO SECONDO NODO
