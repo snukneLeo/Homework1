@@ -83,7 +83,7 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Nodes Graph:</b> <br>
 ![node Graph](images/rosgraph.png) <br>
 
-<b>Esecuzione programma: </b><br>
+<b>Esecuzione programma senza l'uso dello script: </b><br>
 ![Esecuzione programma](images/esecuzione_es.png)
 
 
