@@ -66,12 +66,25 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 <b>Nodo 3:</b> <br>
 ![node 3](images/printInfo.png) <br>
 
+<html>
+  <head> </head>
+  <body>
+    <h3> Illustrazione esecuzione programma <b>con</b> script </h3>
+  </body>
+</html>
+
+<b>Lancio script: </b> <br>
+![script start](images/start_script)
+<b>Esecuzione script con nodi: </b> <br>
+![script esecuzione](images/esecuzione script) <br>
+
+
 La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Nodes Graph:</b> <br>
 ![node Graph](images/rosgraph.png) <br>
 
 <b>Esecuzione programma: </b><br>
-![Esecuzione programma](images/esecuzione_es.png) 
+![Esecuzione programma](images/esecuzione_es.png)
 
 
 
