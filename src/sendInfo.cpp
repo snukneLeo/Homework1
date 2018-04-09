@@ -6,6 +6,16 @@
 using namespace std;
 ///////////////////////////////
 
+//ricezione del messaggio di "uccisione"
+void stopMex(const std_msgs::String::ConstPtr& msg)
+{
+    std::cout << "I'm killing...\n";
+    std::string tmp = msg->data.c_str();
+    if (tmp.compare("kill") == 0)
+        ros::shutdown();
+}
+
+
 int main(int argc, char **argv)
 {
   /**
@@ -46,6 +56,7 @@ int main(int argc, char **argv)
    */
   //CREARE UN TOPIC CHE CONTIENE TUTTE LE CONVERSAZIONE      SI CHIAMA CHATTER CHE È IL TOPIC E HA UN BUFFER DI 1000
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("studentInfo", 1000);
+  ros::Subscriber subKill = n.subscribe("kill", 1000, stopMex);
 //HZ CON CUI INVIARE I NOSTRI MESSAGGI
   ros::Rate loop_rate(1);
 

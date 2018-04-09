@@ -10,6 +10,15 @@ void chatterCallback(const std_msgs::String::ConstPtr& msg)
   ROS_INFO("%s", msg->data.c_str());
 }
 
+//ricezione del messaggio di "uccisione"
+void stopMex(const std_msgs::String::ConstPtr& msg)
+{
+    std::cout << "I'm killing...\n";
+    std::string tmp = msg->data.c_str();
+    if (tmp.compare("kill") == 0)
+        ros::shutdown();
+}
+
 int main(int argc, char **argv)
 {
   /**
@@ -23,6 +32,7 @@ int main(int argc, char **argv)
    * part of the ROS system.
    */
   ros::init(argc, argv, "prinInfo");
+  ros::init(argc, argv, "prinInfo2");
   /**
    * NodeHandle is the main access point to communications with the ROS system.
    * The first NodeHandle constructed will fully initialize this node, and the last
@@ -31,6 +41,8 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
   //Sottoscrivo al pubblicatore con nome modifyInfo
   ros::Subscriber sub = n.subscribe("modifyInfo", 1000, chatterCallback);
+
+  ros::Subscriber subKill = n.subscribe("kill", 1000, stopMex);
   //ricezione continua senza bisgono di while
   ros::spin();
   return 0;

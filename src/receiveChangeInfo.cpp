@@ -14,6 +14,13 @@ int cont = 0; //carattere che quando inserito vale 5 secondi
 int posizioni[2]; //array per posizione di virgola dentro al messaggio
 char carattere[3]; //numero di caratteri prima di ogni virgola dentro al messaggio
 
+//menu
+const std::string menu = "- Digita 'a' per stampare tutto il messaggio\n"
+                    "- Digita 'n' per mostrare il nome\n"
+                    "- Digita 'e' per mostrare l'età\n"
+                    "- Digita 'c' per mostrare il corso di laurea\n"
+                    "- Digita qualsiasi altro carattere per uscire\n";
+
 //INSERIMENTO CARATTERE SENZA PREMERE INVIO
 //CARATTERE INSERITO VALE PER 5 SECONDI E POI VIENE RICHIESTO
 char getch()
@@ -39,7 +46,7 @@ char getch()
 		//siano passati 5 secondi
 		if (temp != c or cont >= 5)
 		{
-			printf("Inserisci il carattere: ");
+			std::cout << menu;
 			c = getchar();  // lettura carattere non bloccante
 			printf("\n");
 			cont = 0; //resetto i "5 secondi"
@@ -138,6 +145,8 @@ int main(int argc, char **argv)
   */
   ros::NodeHandle n;
 
+  ros::Publisher killEachSon = n.advertise<std_msgs::String>("kill", 1000);
+
 	//mi sottoscrivo al nosdo studentInfo
   ros::Subscriber sub = n.subscribe("studentInfo", 1000, chatterCallback);
 
@@ -145,6 +154,7 @@ int main(int argc, char **argv)
   ros::Rate loop_rate(1);
 
 	//aspetto se il nodo "padre" non mi invia alcun messaggio
+  std::cout << "I'm waiting father's node\n";
   while(receive == 0)
   {
     ros::spinOnce();
@@ -156,6 +166,8 @@ int main(int argc, char **argv)
   {
 		//creo il publisher per pubblicare i valori che il nodo "figlio" dovrà stampare
     ros::Publisher infoModify = n.advertise<std_msgs::String>("modifyInfo", 1000);
+
+    int check = 0;
 		//esco in caso di ctrl + c
     while (ros::ok())
     {
@@ -177,7 +189,7 @@ int main(int argc, char **argv)
 			else if(c == 'e' or c == 'E') // 'e' mostrerà solo l'età
 			{
 				std::string eta = splittando(messaggio,c);
-				ss << eta;
+        ss << eta;
 			}
 			else if(c == 'c' or c == 'C') // ‘c’ mostrerà solo il corso di laurea
 			{
@@ -185,12 +197,14 @@ int main(int argc, char **argv)
 				ss << cdl;
 			}
 			//qualsiasi altro carattere diverso da quelli precedenti mi fa uscire daò programma
-			else if(ros::ok())
+			else
 			{
-				return 0;
+				ss << "kill";
+        msg.data = ss.str();
+        killEachSon.publish(msg);
+        ros::shutdown();
 			}
-
-			//creo il messaggio contenente le info volute
+      //creo il messaggio contenente le info volute
       msg.data = ss.str();
 			//pubblico il messaggio
       infoModify.publish(msg);
