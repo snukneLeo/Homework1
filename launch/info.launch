@@ -1,7 +1,8 @@
-<!-- ATTENZIONE QUESTO FILE LAUNCH NON È CORRETTO, AL POSTO DI LANCIARE QUESTO FILE CON ROSLAUNCH
-     SI ESEGUE IL PROGRAMMA COME DESCRITTO SUL README.MD -->
 <launch>
-    <node name="receiveChangeInfo" pkg="homework1" type="receiveChangeInfo" output="screen"/>
-    <node name="sendInfo" pkg="homework1" type="sendInfo" output="screen" />
-    <node name="printInfo" pkg="homework1" type="printInfo" output="screen" />
+  <node name="sendInfo" pkg="homework1" type="sendInfo"
+        output="screen" launch-prefix="gnome-terminal -x sh -c" />
+  <node name="receiveChangeInfo" pkg="homework1" type="receiveChangeInfo"
+        output="screen" launch-prefix="gnome-terminal -x sh -c"/>
+  <node name="printInfo" pkg="homework1" type="printInfo"
+        output="screen" launch-prefix="gnome-terminal -x sh -c"/>
 </launch>
