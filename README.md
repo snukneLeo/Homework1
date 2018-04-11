@@ -35,7 +35,8 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
     <h2> Ulteriore metodo per eseguire il programma </h2>
     <ul>
       <li>
-        Aprire il terminale e digitare roscore
+        Aprire il terminale e digitare il comando: <br>
+        <pre> roscore </pre> <br>
       </li>
       <li>
         Aprire il terminale e digitare il comando: <br>
