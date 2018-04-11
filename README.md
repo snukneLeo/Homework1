@@ -88,7 +88,7 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
     <p>
     Aprire il terminale e posizionarsi sulla cartella catkin_ws. <br>
     Digitare:
-    roslaunch homework1 info.launch
+    <pre> roslaunch homework1 info.launch </pre>
     Ciò che apparirà saranno i tre terminali con cui si interagisce con il programma
     </p>
   </body>
