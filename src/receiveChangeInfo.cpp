@@ -51,24 +51,30 @@ int main(int argc, char **argv)
     std::cout << menu;
     //richiedo il carattere
     std::cin >> c;
-    std::cout << "\n";
 
     //controllo se è errato
     if(c != "a" && c != "n" && c != "e" && c != "c" && c != "q")
     {
       check = 0;
-      std::cout << "Carattere non corretto! Riprova" << '\n';
+      std::cout << '\n';
+      std::cout << "CARATTERE NON CORRETTO! RIPROVA" << '\n';
+      std::cout << '\n';
     }
     //esco se 'q'
     if(c == "q")
     {
       check = 0;
+      std::cout << '\n';
+      std::cout << "EXIT..."<< endl;
+      std::cout << '\n';
       ros::shutdown(); //chiudo il nodo
     }
     //se è tutto ok invio il messaggio
     if(check == 1)
     {
-      std::cout << c;
+      std::cout << '\n';
+      std::cout << "HAI PREMUTO IL TASTO: " + c << endl;
+      std::cout << '\n';
       msg.data = c;
   		//pubblico il messaggio
       infoModify.publish(msg);
