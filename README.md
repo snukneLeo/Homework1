@@ -36,19 +36,19 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
     <ul>
       <li>
         Aprire il terminale e digitare il comando: <br>
-        <pre> roscore </pre> <br>
+        <pre>$ roscore </pre> <br>
       </li>
       <li>
         Aprire il terminale e digitare il comando: <br>
-        <pre> rosrun homework1 sendInfo </pre> <br>
+        <pre>$ rosrun homework1 sendInfo </pre> <br>
       </li>
       <li>
         Aprire un ulteriore terminale e digitare il comando: <br>
-        <pre> rosrun homework1 receiveChangeInfo </pre> <br>
+        <pre>$ rosrun homework1 receiveChangeInfo </pre> <br>
       </li>
       <li>
         Aprire un ulteriore terminale e digitare il comando: <br>
-        <pre> rosrun homework1 printInfo </pre> <br>
+        <pre>$ rosrun homework1 printInfo </pre> <br>
       </li>
     </ul>
     <h3> Illustrazione sull'esecuzione del programma <b>senza</b> script </h3>
