@@ -35,6 +35,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
     </ul>
     <h2> Ulteriore metodo per eseguire il programma </h2>
+    <blockquote>
     <ul>
       <li>
         Aprire il terminale e digitare il comando: <br>
@@ -53,6 +54,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         <pre>$ rosrun homework1 printInfo </pre> <br>
       </li>
     </ul>
+    </blockquote>
     <h3> Illustrazione sull'esecuzione del programma <b>senza</b> script </h3>
   </body>
 </html>
@@ -92,12 +94,14 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
   <head> </head>
   <body>
     <h3> Illustrazione esecuzione programma con <b>roslaunch</b> </h3>
+    <blockquote>
     <p>
     Aprire il terminale e posizionarsi sulla cartella catkin_ws. <br>
     Digitare:
-    <pre> roslaunch homework1 info.launch </pre>
+    <pre>$ roslaunch homework1 info.launch </pre>
     Ciò che apparirà saranno i tre terminali con cui si interagisce con il programma
     </p>
+    </blockquote>
   </body>
 </html>
 
