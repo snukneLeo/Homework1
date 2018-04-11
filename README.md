@@ -29,7 +29,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
       <li>
       Scrivere nel terminale:
-      <pre> $ ./script.sh <pre> <br>
+      <pre> $ ./script.sh </pre> <br>
       Si apriranno altre 3 bash. <br>
       In questi 3 terminali ci saranno: 1° nodo, 2°nodo e 3° nodo. <br>
       </li>
