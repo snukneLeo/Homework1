@@ -1,8 +1,5 @@
 # HOMEWORK_1<br>ROS communication based example
 
-This file is part of homework and it is distributed under the terms of the
-GNU Lesser General Public License (Lesser GPL)
-
 Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attraverso il sistema operativo ROS<br>
 <html>
   <head>
@@ -10,7 +7,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   <body>
     <ul>
       <li>
-      Il primo nodo richiede il nome, età, corso Informatica.
+      Il primo nodo richiede il nome, età, corso Informatica e una volta inserito invierà le info al terzo nodo.
       </li>
       <li>
       Il secondo nodo richiede di inserire: <br>
@@ -18,13 +15,10 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
                                             'n' per visualizzare solo il nome <br>
                                             'e' per visualizzare solo l'età <br>
                                             'c' per visualizzare solo la cdl <br>
-      Il 2° nodo richiederà di inserire la vostra scelta ogni 5 secondi (scelta costruttiva)
-      senza però dover premere invio, ma solo digitando il carattere e nel caso in cui venisse
-      premuto un tasto diverso da quelli elencati sopra
-      il 2° nodo si chiuderebbe.
+      Il carattere sarà inviato al terzo nodo. Se il carattere inserito non è tra quelli a scelta verrà segnalato un errore.
       </li>
       <li>
-      Il terzo nodo mostrerà ciò che nel secondo nodo è stato selezionato. <br>
+      Il terzo nodo mostrerà di default tutto il messaggio e nel caso l'utente inserisca una scelta verrà mostrato solo la parte del messaggio richiesta. <br>
       </li>
     </ul>
     <h2> Come eseguire il programma ROS </h2>
@@ -34,8 +28,8 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       Aprire il terminale all'interno della cartella script.
       </li>
       <li>
-      Scrivere nel terminale: ./script.sh si apriranno altre 3 bash (xterminal).
-      In questi 3 terminali ci saranno: 1° nodo, 2°nodo e 3° nodo.
+      Scrivere nel terminale: ./script.sh si apriranno altre 3 bash.
+      In questi 3 terminali ci saranno: 1° nodo, 2°nodo e 3° nodo. <br>
       </li>
     </ul>
     <h2> Ulteriore metodo per eseguire il programma </h2>
@@ -44,13 +38,13 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
         Aprire il terminale e digitare roscore
       </li>
       <li>
-        Aprire il terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 sendInfo <br>
+        Aprire il terminale e digitare il comando rosrun homework1 sendInfo <br>
       </li>
       <li>
-        Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 receiveChangeInfo
+        Aprire un ulteriore terminale e digitare il comando rosrun homework1 receiveChangeInfo
       </li>
       <li>
-        Aprire un ulteriore terminale e posizionarsi in catkin_ws e digitare il comando rosrun homework1 printInfo
+        Aprire un ulteriore terminale e digitare il comando rosrun homework1 printInfo
       </li>
     </ul>
     <h3> Illustrazione sull'esecuzione del programma <b>senza</b> script </h3>
@@ -73,12 +67,13 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   </body>
 </html>
 
+ <!-- DA MODIFICARE LE IMMAGINI -->
 <b>Lancio script: </b> <br>
 ![script start](images/start_script.png) <br>
 <b>Esecuzione script con nodi: </b> <br>
 ![script esecuzione](images/esecuzione_script.png) <br>
 
-
+<!-- CAMBIARE IMMAGINE NODI -->
 La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Nodes Graph:</b> <br>
 ![node Graph](images/rosgraph.png) <br>
@@ -86,6 +81,18 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Esecuzione programma senza l'uso dello script: </b><br>
 ![Esecuzione programma](images/esecuzione_es.png)
 
+<html>
+  <head> </head>
+  <body>
+    <h3> Illustrazione esecuzione programma con <b>roslaunch</b> </h3>
+    <p>
+    Aprire il terminale e posizionarsi sulla cartella catkin_ws. <br>
+    Digitare:
+    roslaunch homework1 info.launch
+    Ciò che apparirà saranno i tre terminali con cui si interagisce con il programma
+    </p>
+  </body>
+</html>
 
 
 Please, report suggestions/comments/bugs to<br>
