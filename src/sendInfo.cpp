@@ -3,17 +3,10 @@
 #include "std_msgs/String.h"
 #include "stdio.h"
 #include <sstream>
+#include "homework1/Message.h"
+
 using namespace std;
 ///////////////////////////////
-
-//ricezione del messaggio di "uccisione"
-void stopMex(const std_msgs::String::ConstPtr& msg)
-{
-    std::cout << "I'm killing...\n";
-    std::string tmp = msg->data.c_str();
-    if (tmp.compare("kill") == 0)
-        ros::shutdown();
-}
 
 
 int main(int argc, char **argv)
@@ -37,64 +30,44 @@ int main(int argc, char **argv)
    */
   ros::NodeHandle n;
 
-  /**
-   * The advertise() function is how you tell ROS that you want to
-   * publish on a given topic name. This invokes a call to the ROS
-   * master node, which keeps a registry of who is publishing and who
-   * is subscribing. After this advertise() call is made, the master
-   * node will notify anyone who is trying to subscribe to this topic name,
-   * and they will in turn negotiate a peer-to-peer connection with this
-   * node.  advertise() returns a Publisher object which allows you to
-   * publish messages on that topic through a call to publish().  Once
-   * all copies of the returned Publisher object are destroyed, the topic
-   * will be automatically unadvertised.
-   *
-   * The second parameter to advertise() is the size of the message queue
-   * used for publishing messages.  If messages are published more quickly
-   * than we can send them, the number here specifies how many messages to
-   * buffer up before throwing some away.
-   */
-  //CREARE UN TOPIC CHE CONTIENE TUTTE LE CONVERSAZIONE      SI CHIAMA CHATTER CHE È IL TOPIC E HA UN BUFFER DI 1000
-  ros::Publisher chatter_pub = n.advertise<std_msgs::String>("studentInfo", 1000);
-  ros::Subscriber subKill = n.subscribe("kill", 1000, stopMex);
-//HZ CON CUI INVIARE I NOSTRI MESSAGGI
+  //CREARE UN TOPIC CHE CONTIENE TUTTE LE CONVERSAZIONE SI CHIAMA CHATTER CHE È IL TOPIC E HA UN BUFFER DI 1000
+  //uso la srtuttura dei messaggi
+  ros::Publisher chatter_pub = n.advertise<homework1::Message>("studentInfo", 1000);
+  //rate di un secondo
   ros::Rate loop_rate(1);
 
-  /**
-   * A count of how many messages we have sent. This is used to create
-   * a unique string for each message.
-   */
-//INVIO DEI MESSAGGI CON INSERIMENTO DELLE PARTI RICHIESTE
-std::string studente, eta, corsoLaurea;
-cout << "Insert your name: "; //nome
-std::getline (std::cin,studente); //inserimento anche di una stringa con spazi
-printf("\n");
-cout << "Insert your age: "; //eta
-std::getline (std::cin,eta);
-printf("\n");
+  //creo il messaggio con il message che ho creato
+  homework1::Message infoStudent;
 
-cout << "Insert your degree's name: "; //corso di laure
-std::getline (std::cin,corsoLaurea);
-printf("\n");
+  //INVIO DEI MESSAGGI CON INSERIMENTO DELLE PARTI RICHIESTE
+  std::string studente, eta, corsoLaurea;
+  cout << "Insert your name: "; //nome
+  std::getline (std::cin,studente); //inserimento anche di una stringa con spazi
 
-//esce quando riceve ctrl + c
-while (ros::ok())
-{
-  //crea il messaggio
-  std_msgs::String msg;
-  //crea lo stream ss
-  std::stringstream ss;
-  //inserisco le info nello stream ss
-  ss << studente << "," << eta << "," << corsoLaurea;
-  //inserisco in msg le info
-  msg.data = ss.str();
-  //stampo a video le info
-  ROS_INFO("%s", msg.data.c_str());
-  //pubblico il MESSAGGIO
-  chatter_pub.publish(msg);
-  ros::spinOnce();
-  //aspetto un secondo
-  loop_rate.sleep();
-}
+  infoStudent.name = studente; //insertimento name dentro msg
+
+  printf("\n");
+  cout << "Insert your age: "; //età
+  std::getline (std::cin,eta);
+
+  infoStudent.eta = eta;//insertimento età dentro msg
+  printf("\n");
+
+  cout << "Insert your degree's name: "; //corso di laurea
+  std::getline (std::cin,corsoLaurea);
+
+  infoStudent.cdl = corsoLaurea;//insertimento corso di laurea dentro msg
+  printf("\n");
+
+  //esce quando riceve ctrl + c
+  while (ros::ok())
+  {
+    //stampo a video le info
+    ROS_INFO("Name: %s, Age: %s, Degree: %s", infoStudent.name.c_str(),infoStudent.eta.c_str(),infoStudent.cdl.c_str());
+    //pubblico il MESSAGGIO
+    chatter_pub.publish(infoStudent);
+    //aspetto un secondo
+    loop_rate.sleep();
+  }
   return 0;
 }

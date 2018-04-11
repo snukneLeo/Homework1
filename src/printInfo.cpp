@@ -1,22 +1,55 @@
 //INCLUDE LIBRAY
 #include "ros/ros.h"
 #include "std_msgs/String.h"
+#include "homework1/Message.h"
+using namespace std;
 ///////////////////////////////////
+std::string mex; //messaggio
+std::string c = "a"; //carattere scelto
 
-//metodo per riceve il messaggio inviato dal receiveChanegeInfo
-void chatterCallback(const std_msgs::String::ConstPtr& msg)
+std::string name = ""; //nome
+std::string age = ""; //età
+std::string cdl = ""; //corso di laurea
+
+
+//TOPIC SELECTOR
+void carattereInserito(const std_msgs::String::ConstPtr& msg)
 {
-  //stampa le info del messaggio
-  ROS_INFO("%s", msg->data.c_str());
+  //carico il comando arrivato dal nodo di scelta
+  c = msg->data;
 }
 
-//ricezione del messaggio di "uccisione"
-void stopMex(const std_msgs::String::ConstPtr& msg)
+
+//TOPIC STUDENTINFO
+void infoStudent(const homework1::Message msg)
 {
-    std::cout << "I'm killing...\n";
-    std::string tmp = msg->data.c_str();
-    if (tmp.compare("kill") == 0)
-        ros::shutdown();
+  //carico le varibili nella struttura del messaggio
+  name = msg.name.c_str();
+  age = msg.eta.c_str();
+  cdl = msg.cdl.c_str();
+  //stringa finale
+  std::string ss;
+
+  if (c == "a") //messaggio completo
+  {
+    ss = name + "-" + age + "-" + cdl;
+    ROS_INFO("%s", ss.c_str());
+  }
+  else if(c == "n") // ‘n’ mostrerà solo il nome
+  {
+    ss = name;
+    ROS_INFO("---> NAME: %s", name.c_str());
+  }
+  else if(c == "e") // 'e' mostrerà solo l'età
+  {
+    ss = age;
+    ROS_INFO("---> AGE: %s", age.c_str());
+  }
+  else if(c == "c") // ‘c’ mostrerà solo il corso di laurea
+  {
+    ss = cdl;
+    ROS_INFO("---> CDL: %s", cdl.c_str());
+  }
 }
 
 int main(int argc, char **argv)
@@ -32,18 +65,26 @@ int main(int argc, char **argv)
    * part of the ROS system.
    */
   ros::init(argc, argv, "prinInfo");
-  ros::init(argc, argv, "prinInfo2");
   /**
    * NodeHandle is the main access point to communications with the ROS system.
    * The first NodeHandle constructed will fully initialize this node, and the last
    * NodeHandle destructed will close down the node.
    */
   ros::NodeHandle n;
-  //Sottoscrivo al pubblicatore con nome modifyInfo
-  ros::Subscriber sub = n.subscribe("modifyInfo", 1000, chatterCallback);
 
-  ros::Subscriber subKill = n.subscribe("kill", 1000, stopMex);
-  //ricezione continua senza bisgono di while
+  ros::Subscriber studentInfo = n.subscribe("studentInfo",1000, infoStudent); //ricezione info studente
+  ros::Subscriber sub = n.subscribe("selector", 1000, carattereInserito); //ricezione carattere
+
+  //imposto la ricezione con un rate di 1 secondo
+  ros::Rate loop_rate(1);
+
+  //aspetto se il nodo "padre" non mi invia alcun messaggio
+  std::cout << "I'm waiting father's node\n";
+  //attesa dei messaggi dagli altri nodi
   ros::spin();
+  //attendo un secondo
+  loop_rate.sleep();
+
+
   return 0;
 }
