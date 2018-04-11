@@ -89,8 +89,8 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Nodes Graph with all components: </b>
 ![Node Graph with all components](images/rosgraph.png) <br>
 
-<b>Esecuzione programma senza l'uso dello script: </b><br>
-![Esecuzione programma](images/esecuzione_es.png)
+<b>Esecuzione programma: </b><br>
+![Esecuzione programma](images/esecuzione.png)
 
 <html>
   <head> </head>
