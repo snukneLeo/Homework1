@@ -7,7 +7,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   <body>
     <ul>
       <li>
-      Il primo nodo richiede il nome, età, corso Informatica e una volta inserito invierà le info al terzo nodo.
+      Il primo nodo richiede il nome, età, corso di laurea. Una volta inserito tutto ciò le invierà terzo nodo.
       </li>
       <li>
       Il secondo nodo richiede di inserire: <br>
@@ -15,6 +15,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
                                             'n' per visualizzare solo il nome <br>
                                             'e' per visualizzare solo l'età <br>
                                             'c' per visualizzare solo la cdl <br>
+                                            'q' per uscire dal programma <br>
       Il carattere sarà inviato al terzo nodo. Se il carattere inserito non è tra quelli a scelta verrà segnalato un errore.
       </li>
       <li>
@@ -22,7 +23,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
       </li>
     </ul>
     <h2> Come eseguire il programma ROS </h2>
-    Il programma può essere eseguito nel modo in cui segue:
+    Il programma può essere eseguito nel seguente modo:
     <ul>
       <li>
       Aprire il terminale all'interno della cartella script.
@@ -78,9 +79,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 
  <!-- DA MODIFICARE LE IMMAGINI -->
 <b>Lancio script: </b> <br>
-![script start](images/start_script.png) <br>
-<b>Esecuzione script con nodi: </b> <br>
-![script esecuzione](images/esecuzione_script.png) <br>
+![script start](images/script.png) <br>
 
 <!-- CAMBIARE IMMAGINE NODI -->
 La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
@@ -88,9 +87,6 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 ![node Graph](images/rosgraphOnlyNode.png) <br>
 <b>Nodes Graph with all components: </b>
 ![Node Graph with all components](images/rosgraph.png) <br>
-
-<b>Esecuzione programma: </b><br>
-![Esecuzione programma](images/esecuzione.png)
 
 <html>
   <head> </head>
@@ -106,6 +102,13 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
     </blockquote>
   </body>
 </html>
+
+
+<b>Esecuzione programma con roslaunch: </b> <br>
+![script esecuzione](images/infoLaunch.png.png) <br>
+
+<b>Esecuzione programma con roslaunch, modalità classica oppure script: </b><br>
+![Esecuzione programma](images/esecuzione.png)
 
 
 Please, report suggestions/comments/bugs to<br>
