@@ -112,8 +112,8 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 <b>Esecuzione programma con roslaunch, modalità classica oppure script: </b><br>
 ![Esecuzione programma](images/esecuzione.png)
 
-Info Licenza:
-![View License](https://github.com/snukneLeo/homework1/blob/homework1.1/LICENSE)
+Info <b>Licenza</b>: <br>
+[View License](https://github.com/snukneLeo/homework1/blob/homework1.1/LICENSE)
 
 Please, report suggestions/comments/bugs to<br>
 snukne96@gmail.com
