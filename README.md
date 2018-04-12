@@ -10,7 +10,7 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
   <body>
     <ul>
       <li>
-      Il primo nodo richiede il nome, età, corso Informatica.
+      Il primo nodo richiede il nome, età, corso di laurea.
       </li>
       <li>
       Il secondo nodo richiede di inserire: <br>
