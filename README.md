@@ -70,6 +70,8 @@ Homework1 è un esercizio per casa in cui tre nodi comunicano tra loro attravers
 <b>Nodo 3:</b> <br>
 ![node 3](images/printInfo.png) <br>
 
+<pre> !! Non è necessario trovarsi nella cartella catkin_ws !!</pre>
+
 <html>
   <head> </head>
   <body>
