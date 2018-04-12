@@ -107,7 +107,7 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 
 
 <b>Esecuzione programma con roslaunch: </b> <br>
-![script esecuzione](images/infoLaunch.png.png) <br>
+![script esecuzione](images/infoLaunch.png) <br>
 
 <b>Esecuzione programma con roslaunch, modalità classica oppure script: </b><br>
 ![Esecuzione programma](images/esecuzione.png)
