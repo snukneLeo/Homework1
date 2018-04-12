@@ -81,6 +81,8 @@ int main(int argc, char **argv)
   		//aspetto un secondo
       loop_rate.sleep();
     }
+    //entro nell'if se il carattere è corretto
+    check = 1;
   }
   return 0;
 }
