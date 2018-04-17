@@ -116,5 +116,9 @@ La struttura dell'esercizio può essere sintetizzata nell'immagine seguente:<br>
 Info <b>Licenza</b>: <br>
 [View License](https://github.com/snukneLeo/homework1/blob/homework1.1/LICENSE)
 
+<b>Nota: </b> <br>
+<blockquote>
+<pre><b>Il file una volta scaricato da github con il tasto download zip va ridenominato con il nome di homework1</pre><b> <br>
+</blockquote>
 Please, report suggestions/comments/bugs to<br>
 snukne96@gmail.com
