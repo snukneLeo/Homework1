@@ -120,7 +120,7 @@ Info <b>Licenza</b>: <br>
 <blockquote>
 <pre><b>Il file una volta scaricato da github con il tasto download zip va ridenominato con il nome di homework1.
 Altrimenti con git clone il problema è risolto
-</pre><b><br>
+</pre></b><br>
 </blockquote>
 Please, report suggestions/comments/bugs to<br>
 snukne96@gmail.com
